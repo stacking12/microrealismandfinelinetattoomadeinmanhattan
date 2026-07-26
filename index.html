@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IGLA Tattoo Studio NYC — Micro Realism &amp; Fine Line Tattoo, Manhattan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<meta name="description" content="IGLA Tattoo Studio NYC — a Manhattan tattoo studio specializing in micro realism, fine line, mini and color realism tattoos. Walk-ins and same-day appointments welcome." />
+<meta name="keywords" content="Tattoo Studio NYC, Tattoo Shop NYC, Tattoo NYC, Tattoo Studio Manhattan, Tattoo Shop Manhattan, Walk In Tattoo NYC, Walk In Tattoo Manhattan, Fine Line Tattoo NYC, Fine Line Tattoo Manhattan, Mini Tattoo NYC, Mini Tattoo Manhattan, Micro Realism Tattoo NYC, Micro Realism Tattoo Manhattan, Microrealism Tattoo NYC, Realism Tattoo NYC, Realism Tattoo Manhattan, Color Realism Tattoo NYC, Same Day Tattoo NYC" />
+
+<meta property="og:title" content="IGLA Tattoo Studio NYC — Micro Realism Tattoo, Manhattan" />
+<meta property="og:description" content="Fine line, micro realism, mini and color realism tattoos in Midtown Manhattan. Walk-ins welcome, same-day tattoos available." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://iglatattoo.com/" />
+
+<style>
+  :root{
+    --ink:#0B0B0D;
+    --charcoal:#18181B;
+    --charcoal-2:#212124;
+    --line:#2C2C30;
+    --paper:#F4F2ED;
+    --paper-dim:#C9C7C0;
+    --muted:#9A9892;
+    --crimson:#A3282D;
+    --crimson-soft:rgba(163,40,45,0.14);
+    --gold:#BE9A55;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  img{display:block; max-width:100%;}
+
+  /* ---------- header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(11,11,13,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem;
+    letter-spacing:0.01em; text-decoration:none; display:flex; align-items:baseline; gap:8px;
+  }
+  .brand em{font-style:italic; color:var(--crimson); font-weight:500;}
+  nav.primary{display:flex; gap:34px;}
+  nav.primary a{
+    font-size:0.86rem; text-decoration:none; color:var(--paper-dim);
+    letter-spacing:0.01em; transition:color .2s ease;
+  }
+  nav.primary a:hover{color:var(--paper);}
+  .header-actions{display:flex; align-items:center; gap:16px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; letter-spacing:0.06em;
+    text-transform:uppercase; text-decoration:none; padding:11px 20px;
+    border:1px solid var(--crimson); color:var(--paper); border-radius:2px;
+    background:var(--crimson-soft); transition:background .2s ease, transform .2s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--crimson); transform:translateY(-1px);}
+  .btn-ghost{
+    border:1px solid var(--line); background:transparent;
+  }
+  .btn-ghost:hover{border-color:var(--paper-dim); background:transparent; transform:none;}
+  .menu-toggle{display:none; background:none; border:0; color:var(--paper); cursor:pointer;}
+  .mobile-menu{display:none; border-top:1px solid var(--line); background:var(--ink);}
+  .mobile-menu.open{display:block;}
+  .mobile-menu a{
+    display:block; padding:14px 24px; text-decoration:none; color:var(--paper-dim);
+    border-bottom:1px solid var(--line); font-size:0.92rem;
+  }
+
+  /* ---------- signature line motif ---------- */
+  .line-divider{width:100%; height:64px; display:block;}
+  .line-divider path{
+    fill:none; stroke:var(--gold); stroke-width:1.2; opacity:.55;
+    stroke-dasharray:1400; stroke-dashoffset:1400;
+    animation:draw 2.6s ease forwards;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; padding:168px 0 96px; overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem, 5vw, 4rem); line-height:1.04; color:var(--paper);
+  }
+  .hero h1 em{font-style:italic; color:var(--crimson); font-weight:500;}
+  .hero p.lede{
+    margin-top:22px; font-size:1.08rem; line-height:1.65; color:var(--paper-dim);
+    max-width:46ch;
+  }
+  .hero-ctas{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .hero-figure{position:relative;}
+  .hero-figure img{
+    width:100%; height:520px; object-fit:cover; border:1px solid var(--line);
+    filter:grayscale(0.25) contrast(1.05);
+  }
+  .hero-tag{
+    position:absolute; bottom:-18px; left:-18px; background:var(--ink);
+    border:1px solid var(--gold); padding:14px 18px; max-width:220px;
+  }
+  .hero-tag .eyebrow{margin-bottom:4px;}
+  .hero-tag p{font-size:0.85rem; color:var(--paper-dim); margin:0; line-height:1.5;}
+
+  /* ---------- section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head .eyebrow{margin-bottom:10px; display:block;}
+  .section-head h2{font-size:clamp(1.9rem, 3vw, 2.5rem); color:var(--paper);}
+  .section-head p{color:var(--paper-dim); margin-top:14px; line-height:1.65;}
+
+  /* ---------- about ---------- */
+  .about{border-bottom:1px solid var(--line);}
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
+  .about-grid p{color:var(--paper-dim); line-height:1.75; margin:0 0 18px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .about-grid strong{color:var(--paper); font-weight:600;}
+  .stat-rail{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line);}
+  .stat{background:var(--ink); padding:26px 22px;}
+  .stat .num{font-family:'Fraunces', serif; font-size:2.1rem; color:var(--crimson);}
+  .stat .label{font-size:0.82rem; color:var(--muted); margin-top:6px;}
+
+  /* ---------- services (flash-sheet ledger) ---------- */
+  .services{background:var(--charcoal); border-bottom:1px solid var(--line);}
+  .service-list{border-top:1px solid var(--line);}
+  .service-row{
+    display:grid; grid-template-columns:64px 1fr auto; gap:24px; align-items:start;
+    padding:30px 0; border-bottom:1px solid var(--line);
+  }
+  .service-row .idx{
+    font-family:'IBM Plex Mono', monospace; color:var(--gold); font-size:0.9rem; padding-top:6px;
+  }
+  .service-row h3{font-size:1.35rem; color:var(--paper); margin-bottom:8px;}
+  .service-row p{color:var(--paper-dim); line-height:1.65; margin:0; max-width:60ch;}
+  .service-row .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em;
+    color:var(--muted); text-transform:uppercase; padding-top:6px; text-align:right; white-space:nowrap;
+  }
+
+  /* ---------- why us ---------- */
+  .why-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .why-card{background:var(--ink); padding:36px 28px;}
+  .why-card .mark{
+    width:34px; height:34px; border:1px solid var(--gold); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+    color:var(--gold); font-family:'Fraunces', serif; font-style:italic; font-size:1rem;
+  }
+  .why-card h4{color:var(--paper); font-size:1.15rem; margin-bottom:12px;}
+  .why-card p{color:var(--paper-dim); line-height:1.65; margin:0;}
+
+  /* ---------- faq ---------- */
+  .faq{border-bottom:1px solid var(--line);}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:0; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+    padding:24px 0; color:var(--paper); font-family:'Fraunces', serif; font-size:1.1rem;
+  }
+  .faq-q .plus{color:var(--gold); font-size:1.3rem; font-family:'IBM Plex Mono', monospace; transition:transform .25s ease; flex-shrink:0;}
+  .faq-q[aria-expanded="true"] .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-a p{color:var(--paper-dim); line-height:1.7; padding:0 0 26px; margin:0; max-width:68ch;}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--charcoal);}
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;}
+  .info-list{list-style:none; margin:0 0 30px; padding:0;}
+  .info-list li{
+    display:grid; grid-template-columns:110px 1fr; gap:16px; padding:16px 0;
+    border-top:1px solid var(--line); font-size:0.98rem;
+  }
+  .info-list li:last-child{border-bottom:1px solid var(--line);}
+  .info-list .k{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); padding-top:2px;}
+  .info-list .v a{color:var(--paper); text-decoration:none; border-bottom:1px solid var(--line);}
+  .info-list .v a:hover{border-color:var(--gold);}
+  .map-frame{border:1px solid var(--line); overflow:hidden;}
+  .map-frame iframe{width:100%; height:420px; border:0; filter:grayscale(0.4) invert(0.92) contrast(0.9);}
+
+  /* ---------- keyword rail ---------- */
+  .keywords{padding:56px 0 80px;}
+  .keyword-rail{display:flex; flex-wrap:wrap; gap:10px;}
+  .keyword-rail span{
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem; color:var(--paper-dim);
+    border:1px solid var(--line); padding:8px 14px; border-radius:2px;
+  }
+
+  footer{border-top:1px solid var(--line); padding:32px 0;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  footer p{font-size:0.82rem; color:var(--muted); margin:0;}
+
+  @media (max-width: 860px){
+    nav.primary, .header-actions .btn-ghost{display:none;}
+    .menu-toggle{display:block;}
+    .hero{padding:140px 0 64px;}
+    .hero-grid, .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .hero-figure{order:-1;}
+    .hero-figure img{height:340px;}
+    .why-grid{grid-template-columns:1fr;}
+    .service-row{grid-template-columns:40px 1fr; }
+    .service-row .tag{grid-column:2; text-align:left; padding-top:0;}
+    .stat-rail{grid-template-columns:1fr 1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .line-divider path{animation:none; stroke-dashoffset:0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">IGLA Tattoo Studio NYC</a>
+    <nav class="primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+18887079138" class="btn btn-ghost">888-707-9138</a>
+      <a href="https://iglatattoo.com/" class="btn">Book Now</a>
+    </div>
+    <button class="menu-toggle" id="menuBtn" aria-label="Open menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+18887079138">Call 888-707-9138</a>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Tattoo Studio · Midtown Manhattan</span>
+        <h1 style="margin-top:14px;">Micro Realism &amp; <em>Fine Line</em> Tattoo, Made in Manhattan.</h1>
+        <p class="lede">IGLA Tattoo Studio NYC is a Manhattan tattoo shop built around precision — micro realism, fine line, mini and color realism work, tattooed by artists who treat detail as the whole point. Walk-ins and same-day tattoos are always welcome.</p>
+        <div class="hero-ctas">
+          <a href="https://iglatattoo.com/" class="btn">Book a Consult</a>
+          <a href="#services" class="btn btn-ghost">See Our Services</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <img src="https://img.magnific.com/premium-photo/woman-with-black-dress-black-dress-is-walking-down-street_960396-836480.jpg?ga=GA1.1.1835009094.1784893198" alt="Walking through Midtown Manhattan near IGLA Tattoo Studio NYC" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+    <path d="M0,32 C150,4 250,60 400,32 C550,4 650,60 800,32 C950,4 1050,60 1200,32" />
+  </svg>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">About the Studio</span>
+        <h2>A tattoo studio built for detail work.</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Tucked into the sixth floor at <strong>36 W 36th St, New York, NY 10018</strong>, IGLA Tattoo Studio NYC was built around one idea: the smallest tattoos deserve the same discipline as the biggest ones. That's why <strong>micro realism tattoo Manhattan</strong> work sits at the center of what we do — portraits, textures, and fine detail scaled down without losing their depth.</p>
+          <p>Alongside micro realism, our artists tattoo <strong>fine line, mini, and color realism</strong> pieces for clients across Manhattan and the wider city. Whether you're booking ahead or asking about a <strong>walk in tattoo NYC</strong> appointment the same afternoon, we keep the studio set up to move quickly without rushing the work.</p>
+        </div>
+        <div>
+          <p>Every consult starts with the placement and scale that suit the design, not the other way around. That approach is why clients searching for a <strong>tattoo studio Manhattan</strong> they can trust with detailed, long-lasting work keep coming back to IGLA — and why so many first-timers choose us for their first <strong>mini tattoo NYC</strong> piece.</p>
+          <div class="stat-rail">
+            <div class="stat"><div class="num">6th Fl</div><div class="label">36 W 36th St, NYC</div></div>
+            <div class="stat"><div class="num">Daily</div><div class="label">Walk-ins welcome</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Four ways we work in ink.</h2>
+        <p>Every service below is tattooed in-house at our Manhattan studio, from first sketch to final line.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-row">
+          <div class="idx">01</div>
+          <div>
+            <h3>Micro Realism Tattoo</h3>
+            <p>Our specialty. <strong>Micro realism tattoo Manhattan</strong> work compresses real detail — skin texture, light, shadow — into small-scale pieces, often just a few inches across. It takes a steady hand and a lot of patience, and it's what IGLA is built around.</p>
+          </div>
+          <div class="tag">Signature</div>
+        </div>
+        <div class="service-row">
+          <div class="idx">02</div>
+          <div>
+            <h3>Fine Line Tattoo</h3>
+            <p>Clean, single-needle line work for scripts, botanicals, portraits, and minimalist designs. Fine line tattoo Manhattan clients come to us for crisp lines that age well, not just look good on day one.</p>
+          </div>
+          <div class="tag">Detail Work</div>
+        </div>
+        <div class="service-row">
+          <div class="idx">03</div>
+          <div>
+            <h3>Mini Tattoo</h3>
+            <p>Small, well-placed pieces for a first tattoo or an addition to an existing collection. Mini tattoo NYC sessions are quick to book and easy to fit into a lunch break or a walk-in visit.</p>
+          </div>
+          <div class="tag">Quick Session</div>
+        </div>
+        <div class="service-row">
+          <div class="idx">04</div>
+          <div>
+            <h3>Color Realism Tattoo</h3>
+            <p>Full-color realism for larger pieces — portraits, nature scenes, and detailed custom work. Color realism tattoo NYC projects are typically planned across multiple sessions for the best result.</p>
+          </div>
+          <div class="tag">Custom Project</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="line-divider" viewBox="0 0 1200 64" preserveAspectRatio="none">
+    <path d="M0,32 C150,60 250,4 400,32 C550,60 650,4 800,32 C950,60 1050,4 1200,32" />
+  </svg>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Why choose IGLA Tattoo Studio NYC?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="mark">01</div>
+          <h4>Micro Realism Specialists</h4>
+          <p>Most tattoo shops offer realism as one option among many. At IGLA, <strong>micro realism tattoo Manhattan</strong> work is what we're known for, so it gets the attention it needs from consult to aftercare.</p>
+        </div>
+        <div class="why-card">
+          <div class="mark">02</div>
+          <h4>Walk-In &amp; Same-Day Availability</h4>
+          <p>Not every tattoo needs weeks of planning. For smaller pieces, our <strong>walk in tattoo NYC</strong> and <strong>same day tattoo NYC</strong> availability means you can often get tattooed the same day you decide to.</p>
+        </div>
+        <div class="why-card">
+          <div class="mark">03</div>
+          <h4>A Manhattan Studio, Built for the City</h4>
+          <p>Located on the 6th floor of 36 W 36th St, our <strong>tattoo studio Manhattan</strong> location keeps us close to Midtown, easy to reach, and easy to return to for your next piece.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>What is a micro realism tattoo?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a"><p>Micro realism shrinks realistic detail — like the texture of a portrait or an animal's fur — down into a small tattoo, often just a couple of inches. It relies on fine needlework to keep the depth and shading that realism is known for, even at a tiny scale.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do you accept walk-ins at your Manhattan tattoo studio?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a"><p>Yes. IGLA Tattoo Studio NYC accepts walk-ins for smaller pieces, including mini and fine line tattoos, in addition to scheduled consults for larger realism work. Same-day tattoos are available depending on artist availability.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How long does a fine line tattoo take to heal?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a"><p>Most fine line tattoos heal within 2 to 3 weeks on the surface, with full healing underneath taking closer to a couple of months. Because the lines are thin, following aftercare instructions closely helps keep them crisp long-term.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Can I really get a tattoo the same day I walk in?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a"><p>For mini and fine line designs, often yes — that's exactly what our same-day tattoo NYC option is for. Larger color realism or detailed micro realism pieces usually benefit from a short consult first, so we can plan placement and sizing properly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do you require a deposit to book an appointment?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a"><p>For scheduled sessions, a deposit is typically required to hold your appointment time and is applied toward the final cost of your tattoo. Walk-in visits are handled directly at the studio — call ahead to confirm current policy and availability.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Visit Us</span>
+        <h2>Contact IGLA Tattoo Studio NYC</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <ul class="info-list">
+            <li><span class="k">Studio</span><span class="v">IGLA Tattoo Studio NYC</span></li>
+            <li><span class="k">Address</span><span class="v">36 W 36th St. 6th floor, New York, NY 10018</span></li>
+            <li><span class="k">Phone</span><span class="v"><a href="tel:+18887079138">888-707-9138</a></span></li>
+            <li><span class="k">Website</span><span class="v"><a href="https://iglatattoo.com/" target="_blank" rel="noopener">iglatattoo.com</a></span></li>
+          </ul>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.406297289954!2d-73.9852653!3d40.750325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x83be5cdef6370857%3A0x820a0583d138d2a2!2sIGLA%20Tattoo%20Studio%20NYC!5e1!3m2!1sen!2s!4v1785049986894!5m2!1sen!2s" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEYWORD RAIL -->
+  <section class="keywords">
+    <div class="wrap">
+      <span class="eyebrow" style="display:block; margin-bottom:16px;">Related Searches</span>
+      <div class="keyword-rail">
+        <span>Tattoo Studio NYC</span>
+        <span>Tattoo Shop NYC</span>
+        <span>Tattoo Studio Manhattan</span>
+        <span>Walk In Tattoo NYC</span>
+        <span>Fine Line Tattoo Manhattan</span>
+        <span>Mini Tattoo NYC</span>
+        <span>Micro Realism Tattoo Manhattan</span>
+        <span>Realism Tattoo NYC</span>
+        <span>Color Realism Tattoo NYC</span>
+        <span>Same Day Tattoo NYC</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> IGLA Tattoo Studio NYC — 36 W 36th St. 6th floor, New York, NY 10018</p>
+    <p><a href="tel:+18887079138" style="text-decoration:none; border-bottom:1px solid var(--line);">888-707-9138</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.style.maxHeight = null;
+      });
+      if (!expanded){
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+</body>
+</html>
